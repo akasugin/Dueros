@@ -13,7 +13,7 @@
 ### 项目获取
 通过git下载代码到本地
 
-    # git clone https://github.com/MyDuerOS/DuerOS-Python-Client.git
+    # git clone https://github.com/akasugin/Dueros.git
 
 ### 认证授权
 在DuerOS-Python-Client目录下执行
@@ -26,11 +26,11 @@
     # ./enter_trigger_start.sh
 
 然后，每次单击[Enter]键后进行语音输入
-### 通过[小度小度]触发唤醒状态
+### 通过[小车小车]触发唤醒状态
 在DuerOS-Python-Client目录下执行
 
     # ./wakeup_trigger_start.sh
-然后，每次通过[小度小度]进行唤醒，然后，进行语音输入
+然后，每次通过[小车小车]进行唤醒，然后，进行语音输入
 
  
 ## 代码结构
@@ -43,15 +43,15 @@ DuerOS-Python-Client代码结构如下图所示，
 
 *DuerOS-Python-Client:项目根目录*
 
-* DuerOS-Python-Client/auth.sh:认证授权脚本
-* DuerOS-Python-Client/enter_trigger_start.sh:[Enter]按键触发唤醒脚本
-* DuerOS-Python-Client/wakeup_tirgger_start.sh:[小度小度]触发唤醒脚本
+* DuerOS-Python-Client/auth.sh:认证授权脚本,实际上运行app下的auth.py
+* DuerOS-Python-Client/enter_trigger_start.sh:[Enter]按键触发唤醒脚本，实际上运行app下的enter_trigger_main.py
+* DuerOS-Python-Client/wakeup_tirgger_start.sh:[小车小车]触发唤醒脚本，实际上运行app下的wakeup_trigger_main.py
 
 *DuerOS-Python-Client/app:应用目录*
 
 * DuerOS-Python-Client/app/auth.py:认证授权实现模块
 * DuerOS-Python-Client/app/enter_trigger_main.py:[Enter]按键触发唤醒实现模块
-* DuerOS-Python-Client/app/wakeup_tirgger_main.py:[小度小度]触发唤醒实现模块
+* DuerOS-Python-Client/app/wakeup_tirgger_main.py:[小车小车]触发唤醒实现模块
 * DuerOS-Python-Client/app/framework:平台相关目录
 * DuerOS-Python-Client/app/framework/mic.py:录音模块(基于pyaudio)
 * DuerOS-Python-Client/app/framework/player.py:播放模块(基于GStreamer)
