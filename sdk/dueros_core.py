@@ -65,9 +65,9 @@ class DuerOSStateListner(object):
         :return:
         '''
         logging.info('[DuerOS状态]正在播放........')
-        s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        s.connect(('192.168.20.214',8087))
-        data='run_Car_Speed:100'
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect(('192.168.20.214', 8087))
+        data = 'run_Car_Speed:100'
         s.send(data)
         s.send(data)
         time.sleep(1)
@@ -376,6 +376,7 @@ class DuerOS(object):
                             logger.debug(json_payload)
                             if 'directive' in json_payload:
                                 directives.append(json_payload['directive'])
+                                logger.info('binger test:', directives)
                     else:
                         logger.info("Finished downloading {} which is {}".format(content_type, content_id))
                         payload.seek(0)
